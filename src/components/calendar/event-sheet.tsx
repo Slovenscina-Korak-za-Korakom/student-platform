@@ -11,7 +11,6 @@ import {
   IconMapPin,
   IconPhone,
   IconMail,
-  IconEdit,
   IconCalendarEvent,
   IconX,
   IconClock,
@@ -293,14 +292,6 @@ export const EventSheet = (props: EventSheetProps) => {
                           <span>{tE("recurring-note")}</span>
                         </div>
                         <div className="flex gap-3">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="flex-1 shadow-sm hover:shadow transition-all duration-200"
-                          >
-                            <IconEdit className="h-4 w-4 mr-2" />
-                            {t("buttons.contact")}
-                          </Button>
                           <Button
                             variant="destructive"
                             size="sm"
