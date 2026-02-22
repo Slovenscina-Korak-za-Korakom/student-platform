@@ -31,42 +31,56 @@ export const people = [
     name: ["Oleksandr", "Tyutyunnyk"],
     role: "CEO / Main Teacher",
     fluentIn: ["Slovene", "English", "Russian"],
-    imageUrl: `/foto-oleksandr3.jpg`,
+    imageUrl: "/staff-images/foto-oleksandr3.jpg",
   },
   {
     id: 2,
     name: ["Sebastjan", "Bas"],
     role: "Software Engineer",
     fluentIn: [""],
-    imageUrl: `/foto-me.jpg`,
+    imageUrl: "/staff-images/foto-me.jpg",
   },
   {
     id: 3,
     name: ["Sofiya", "Tyutyunnyk"],
     role: "Professional Teacher/Tutor",
     fluentIn: ["Slovene", "English", "Russian"],
-    imageUrl: `/foto-sofia.jpg`,
+    imageUrl: "/staff-images/foto-sofia.jpg",
   },
   {
     id: 4,
     name: ["Manca", "Levašič"],
     role: "Social Media Manager",
     fluentIn: ["Slovene", "English"],
-    imageUrl: `/foto-manca.png`,
+    imageUrl: "/staff-images/foto-manca.png",
   },
   {
     id: 5,
     name: ["Ela", "Remic"],
     role: "Professional Teacher/Tutor",
     fluentIn: ["Slovene", "Russian", "English"],
-    imageUrl: "/foto-ela.jpg",
+    imageUrl: "/staff-images/foto-ela.jpg",
   },
+  {
+    id: 6,
+    name: ["Albina", ""],
+    role: "Professional Teacher/Tutor",
+    fluentIn: [],
+    imageUrl: "/staff-images/foto-albina.jpeg",
+  },
+  {
+    id: 7,
+    name: ["Ajda", ""],
+    role: "Professional Teacher/Tutor",
+    fluentIn: [],
+    imageUrl: "/staff-images/foto-ajda.jpeg",
+  }
 ];
 
 export const reviews = [
   {
     id: 1,
-    image: "/foto-vlad.png",
+    image: "/testimonials-images/foto-vlad.png",
     // name: "Vlad Lisin",
     name: "Vlad Sirski",
     role: "student",
@@ -76,7 +90,7 @@ export const reviews = [
   },
   {
     id: 2,
-    image: "/foto-anna.png",
+    image: "/testimonials-images/foto-anna.png",
     // name: "Anna Kotelnikova",
     name: "Anna Popova",
     role: "student",
@@ -86,7 +100,7 @@ export const reviews = [
   },
   {
     id: 3,
-    image: "/foto-oleksiy.png",
+    image: "/testimonials-images/foto-oleksiy.png",
     name: "Oleksiy Molchanov",
     role: "student",
     text: "alexander-molchanov",
@@ -94,7 +108,7 @@ export const reviews = [
   },
   {
     id: 4,
-    image: "/foto-evgenia.png",
+    image: "/testimonials-images/foto-evgenia.png",
     name: "Evgenia Rudakova",
     role: "student",
     text: "evgenia-rudakova",
@@ -102,7 +116,7 @@ export const reviews = [
   },
   {
     id: 5,
-    image: "/foto-violeta.png",
+    image: "/testimonials-images/foto-violeta.png",
     name: "Violeta Lisin",
     role: "student",
     text: "violeta-lisin",
@@ -110,7 +124,7 @@ export const reviews = [
   },
   {
     id: 6,
-    image: "/foto-oleg.png",
+    image: "/testimonials-images/foto-oleg.png",
     name: "Oleg Kotelnikov",
     role: "student",
     text: "oleg-kotelnikov",
@@ -389,7 +403,7 @@ export const tutors = [
   {
     id: 1,
     name: "Ela Remic",
-    avatar: "/foto-ela.jpg",
+    avatar: "/staff-images/foto-ela.jpg",
     description: {
       ru: "Senior Tutor",
       en: "Senior Tutor",
@@ -400,7 +414,7 @@ export const tutors = [
   {
     id: 2,
     name: "Oleksandr Tyutyunnyk",
-    avatar: "/foto-oleksandr3.jpg",
+    avatar: "/staff-images/foto-oleksandr3.jpg",
     description: {
       ru: "Senior Tutor",
       en: "Senior Tutor",
@@ -412,13 +426,35 @@ export const tutors = [
     id: 3,
     name: "Sofia Tyutyunnyk",
     description: {
+      ru: "Senior Tutor",
+      en: "Senior Tutor",
+      it: "Senior Tutor",
+      sl: "Senior Tutor",
+    },
+    avatar: "/staff-images/foto-sofia.jpg",
+  },
+  {
+    id: 4,
+    name: "Albina",
+    description:{
       ru: "Junior Tutor",
       en: "Junior Tutor",
       it: "Junior Tutor",
       sl: "Junior Tutor",
     },
-    avatar: "/foto-sofia.jpg",
+    avatar: "/staff-images/foto-albina.jpeg",
   },
+  {
+    id: 5,
+    name: "Ajda",
+    description: {
+      ru: "Junior Tutor",
+      en: "Junior Tutor",
+      it: "Junior Tutor",
+      sl: "Junior Tutor",
+    },
+    avatar: "/staff-images/foto-ajda.jpeg",
+  }
 ];
 
 export const learningGoals = [

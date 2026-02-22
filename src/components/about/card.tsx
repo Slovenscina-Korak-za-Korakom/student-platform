@@ -10,7 +10,7 @@ function Card({ person }) {
                 <Image
                     width={96}
                     height={96}
-                    className="rounded-full object-cover shadow-lg"
+                    className="rounded-full object-cover shadow-lg aspect-square"
                     src={person.imageUrl}
                     alt={person.name}
                 />

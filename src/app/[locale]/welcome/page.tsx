@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect, useState} from "react";
+import {useState} from "react";
 import {useUser} from "@clerk/nextjs";
 import {Button} from "@/components/ui/button";
 import {
@@ -35,16 +35,6 @@ const WelcomePage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const totalSteps = 3;
-
-  useEffect(() => {
-    if (isLoaded && user) {
-      // Check if user has already completed onboarding
-      const hasCompletedOnboarding = user.unsafeMetadata?.onboardingCompleted;
-      if (hasCompletedOnboarding) {
-        redirect({href: "/dashboard", locale: locale});
-      }
-    }
-  }, [isLoaded, user, locale]);
 
   const handlePreferenceChange = (
     key: keyof UserPreferences,
@@ -166,7 +156,7 @@ const WelcomePage = () => {
                       <div className="flex flex-col items-center gap-4">
                         {/* Avatar */}
                         <Avatar className="w-24 h-24">
-                          <AvatarImage src={tutor.avatar} alt={tutor.name}/>
+                          <AvatarImage className="aspect-square object-cover" src={tutor.avatar} alt={tutor.name}/>
                           <AvatarFallback>
                             <IconUser className="h-12 w-12 text-foreground/40"/>
                           </AvatarFallback>
