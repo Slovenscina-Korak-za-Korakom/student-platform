@@ -99,7 +99,6 @@ export const bookEventDirect = async (eventId: string) => {
     );
 
     bookingsTotal.inc({status: "booked", type: "language_club"})
-    console.log('bookings_total INCREMENTED: {status: "booked", type: "language_club"}')
 
     const emailTimer = emailDuration.startTimer({template: "lang_club_booking_confirmation"})
 

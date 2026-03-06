@@ -124,7 +124,6 @@ export const bookSession = async (data: TutoringSession) => {
 
     // collect metrics
     bookingsTotal.inc({status: "booked", type: data.sessionType})
-    console.log(`bookings_total INCREMENTED: {status: "booked", type: ${data.sessionType}}`)
     bookingsRevenue.labels({type: data.sessionType}).inc(tutor.level === "junior" ? (data.duration === 45 ? 15 : 20) : (data.duration === 45 ? 17 : 22))
 
     const sessionId = response[0].id;
@@ -282,7 +281,6 @@ export const cancelSession = async (sessionId: number) => {
 
 
     bookingsTotal.inc({status: "cancelled", type: session.sessionType})
-    console.log(`bookings_total INCREMENTED: {status: "cancelled", type: ${session.sessionType}}`)
 
     const emailTimer = emailDuration.startTimer({template: "cancellation_confirmation"});
 

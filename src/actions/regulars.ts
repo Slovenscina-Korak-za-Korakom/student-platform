@@ -5,7 +5,6 @@ import {cancelledRegularSessionsTable, regularInvitationsTable, tutorsTable} fro
 import {auth, clerkClient} from "@clerk/nextjs/server";
 import {and, eq} from "drizzle-orm";
 import {addMonths, addWeeks, format, isAfter, isBefore, setDay, startOfDay} from "date-fns";
-import {fromZonedTime} from "date-fns-tz";
 import TutorSessionCancelEmail from "@/emails/tutor-session-cancel-email";
 import {RegularInvitation, CancelledSession, RegularSession} from "@/types/interfaces";
 import {resend} from "@/lib/resend";
@@ -80,12 +79,9 @@ export async function generateRecurringSessions(
 
     // Generate sessions for the next 3 months
     while (isBefore(currentDate, threeMonthsFromNow)) {
-      // Create the full datetime in CET timezone
-      // Format the date and combine with the time, then interpret as CET
+      // Create the full datetime treating startTime as UTC (consistent with schedulesTable)
       const dateStr = format(currentDate, 'yyyy-MM-dd');
-      const dateTimeStr = `${dateStr} ${invitation.startTime}:00`;
-      // fromZonedTime converts a "local" time in a specific timezone to UTC
-      const sessionDateTime = fromZonedTime(dateTimeStr, 'Europe/Ljubljana');
+      const sessionDateTime = new Date(`${dateStr}T${invitation.startTime}:00Z`);
 
       // Check if this date is cancelled
       const cancelKey = `${invitation.id}-${startOfDay(currentDate).toISOString()}`;
