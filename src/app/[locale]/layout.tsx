@@ -43,9 +43,31 @@ export default async function LocaleLayout({ children, params }) {
   // Enable static rendering
   await setRequestLocale(locale);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Slovenscina Korak za Korakom",
+    url: "https://slovenscinakzk.com",
+    description:
+      "Personalized Slovene lessons tailored to your goals. Learn online with experienced teachers and join a community of over 1,200 members.",
+    publisher: {
+      "@type": "Organization",
+      name: "Slovenscina Korak za Korakom",
+      url: "https://slovenscinakzk.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://slovenscinakzk.com/logo-image.png",
+      },
+    },
+  };
+
   return (
     <html lang={locale} suppressHydrationWarning className={`${manropeFont.variable} ${tankerFont.variable}`}>
       <body className={"font-manrope font-medium"}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Toaster richColors position="bottom-right" />
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
