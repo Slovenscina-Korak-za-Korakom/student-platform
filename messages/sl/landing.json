@@ -103,14 +103,14 @@
           "Dostop do učnih materialov za izpit A1, A2, B1, B2, C1",
           "+ 1 dodatna brezplačna ura",
           "Dostop do šolskih materialov za učence, dijake in študente",
-          "Zaseban telegram skupina",
+          "Zasebna telegram skupina",
           "Dostop do posnetkov preteklih predavanj"
         ]
       },
       "plan2": {
-        "description": "Prilagodljiv načrt, če šele začenjate s slovenščino. Izkoristite 45 min interaktivne seje in prilagodljiv urnik, ki vam bo ustrezal.",
+        "description": "Prilagodljiv načrt, če šele začenjate s slovenščino. Izkoristite 60 min interaktivne seje in prilagodljiv urnik, ki vam bo ustrezal.",
         "features": [
-          "45 min individualne ure, prilagojene vašim ciljem",
+          "60 min individualne ure, prilagojene vašim ciljem",
           "+ 1 dodatna brezplačna ura",
           "Dostop do šolskih materialov za učence, dijake in študente",
           "Prilagodljiv urnik in materijali",
@@ -122,17 +122,17 @@
         ]
       },
       "plan3": {
-        "description": "Prilagodljiv načrt za majhne skupine, idealen za družine ali prijatelje. Uživajte v 60 min lekcijah s skupinskimi dejavnostmi in skupnimi cilji.",
+        "description": "Prilagodljiv načrt, če šele začenjate s slovenščino. Izkoristite 45 min interaktivne seje in prilagodljiv urnik, ki vam bo ustrezal.",
         "features": [
-          "Zasebna telegram skupina",
+          "45 min individualne ure, prilagojene vašim ciljem",
+          "+ 1 dodatna brezplačna ura",
           "Dostop do šolskih materialov za učence, dijake in študente",
-          "Vadite s prijateljem ali družinskim članom",
+          "Prilagodljiv urnik in materijali",
           "Sodobne metode poučevanja.",
           "Dostop do učnih materialov za izpit A1, A2, B1, B2, C1",
-          "+ 1 dodatna brezplačna ura",
           "Poučne ure z naravnim govorcem in profesionalnim tutorjem",
-          "Dostop do posnetkov preteklih predavanj",
-          "Prilagodljiv urnik in materijali"
+          "Zaseben tutor",
+          "Dostop do posnetkov preteklih predavanj"
         ]
       }
     },
